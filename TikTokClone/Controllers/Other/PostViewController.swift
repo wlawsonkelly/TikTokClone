@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol PostViewControllerDelegate: AnyObject {
     func postViewController(_ vc: PostViewController, didTapCommentButtonFor post: PostModel)
+    func postViewController(_ vc: PostViewController, didTapProfileButtonFor post: PostModel)
 }
 
 class PostViewController: UIViewController {
@@ -17,7 +19,7 @@ class PostViewController: UIViewController {
     var model: PostModel
 
     private let likeButton: UIButton = {
-        let button = UIButton(type: .system)
+        let button = UIButton()
         button.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.tintColor = .white
@@ -25,7 +27,7 @@ class PostViewController: UIViewController {
     }()
 
     private let commentButton: UIButton = {
-        let button = UIButton(type: .system)
+        let button = UIButton()
         button.setImage(UIImage(systemName: "text.bubble.fill"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.tintColor = .white
@@ -33,9 +35,18 @@ class PostViewController: UIViewController {
     }()
 
     private let shareButton: UIButton = {
-        let button = UIButton(type: .system)
+        let button = UIButton()
         button.setImage(UIImage(systemName: "arrowshape.turn.up.right.fill"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
+        button.tintColor = .white
+        return button
+    }()
+
+    private let profileButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "test"), for: .normal)
+        button.imageView?.contentMode = .scaleAspectFill
+        button.layer.masksToBounds = true
         button.tintColor = .white
         return button
     }()
@@ -50,6 +61,8 @@ class PostViewController: UIViewController {
         return label
     }()
 
+    var player: AVPlayer?
+
     init(model: PostModel) {
         self.model = model
         super.init(nibName: nil, bundle: nil)
@@ -61,10 +74,12 @@ class PostViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = [.blue, .green, .orange, .yellow].randomElement()
+        configureVideo()
         setupButtons()
         setupDoubleTapToLike()
         view.addSubview(captionLabel)
+        view.addSubview(profileButton)
+        profileButton.addTarget(self, action: #selector(didTapProfileButton), for: .touchUpInside)
     }
 
     override func viewDidLayoutSubviews() {
@@ -79,6 +94,15 @@ class PostViewController: UIViewController {
         captionLabel.sizeToFit()
         let labelSize = captionLabel.sizeThatFits(CGSize(width: view.width - size - 12, height: view.height))
         captionLabel.frame = CGRect(x: 5, y: view.height - view.safeAreaInsets.bottom - labelSize.height - 12 -  (tabBarController?.tabBar.height ?? 0), width: view.width - size - 12, height: labelSize.height)
+
+        profileButton.frame = CGRect(
+            x: likeButton.left,
+            y: likeButton.top - size,
+            width: size,
+            height: size
+        )
+
+        profileButton.layer.cornerRadius = size / 2
     }
 
     fileprivate func setupButtons() {
@@ -89,6 +113,21 @@ class PostViewController: UIViewController {
         likeButton.addTarget(self, action: #selector(didTapLike), for: .touchUpInside)
         commentButton.addTarget(self, action: #selector(didTapComment), for: .touchUpInside)
         shareButton.addTarget(self, action: #selector(didTapShare), for: .touchUpInside)
+    }
+
+    fileprivate func configureVideo() {
+        guard let path = Bundle.main.path(forResource: "video", ofType: "mp4") else {
+            return
+        }
+        let url = URL(fileURLWithPath: path)
+        player = AVPlayer(url: url)
+
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = view.bounds
+        playerLayer.videoGravity = .resizeAspectFill
+        view.layer.addSublayer(playerLayer)
+        player?.volume = 0
+        player?.play()
     }
 
     fileprivate func setupDoubleTapToLike() {
@@ -146,5 +185,9 @@ class PostViewController: UIViewController {
         }
         let shareSheet = UIActivityViewController(activityItems: [url], applicationActivities: [])
         present(shareSheet, animated: true)
+    }
+
+    @objc fileprivate func didTapProfileButton() {
+        delegate?.postViewController(self, didTapProfileButtonFor: model)
     }
 }

@@ -80,7 +80,7 @@ class CommentTableViewCell: UITableViewCell {
         commentLabel.text = model.text
         dateLabel.text = .date(with: model.date)
         if let url = model.user.profilePictureUrl {
-
+            print(url)
         } else {
             avatarImageView.image = UIImage(systemName: "person.circle")?.withRenderingMode(.alwaysOriginal)
         }
