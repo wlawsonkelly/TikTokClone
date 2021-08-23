@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0835A2FD26D32BC10042430B /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0835A2FC26D32BC10042430B /* CommentViewController.swift */; };
+		0835A2FF26D33C3A0042430B /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0835A2FE26D33C3A0042430B /* PostComment.swift */; };
+		0835A30126D33C670042430B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0835A30026D33C670042430B /* User.swift */; };
+		0835A30326D33E500042430B /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0835A30226D33E500042430B /* CommentTableViewCell.swift */; };
 		0861554126CF3AD500F6A90E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0861554026CF3AD500F6A90E /* AppDelegate.swift */; };
 		0861554326CF3AD500F6A90E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0861554226CF3AD500F6A90E /* SceneDelegate.swift */; };
 		0861554526CF3AD500F6A90E /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0861554426CF3AD500F6A90E /* HomeController.swift */; };
@@ -22,17 +26,22 @@
 		0887F7E826CF3FA800215D24 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7E726CF3FA800215D24 /* SignupViewController.swift */; };
 		0887F7EA26CF3FD000215D24 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7E926CF3FD000215D24 /* TabBarViewController.swift */; };
 		0887F7EE26CF401000215D24 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7ED26CF401000215D24 /* PostViewController.swift */; };
-		0887F7F026CF401C00215D24 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7EF26CF401C00215D24 /* APICaller.swift */; };
 		0887F7F226CF402D00215D24 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7F126CF402D00215D24 /* StorageManager.swift */; };
 		0887F7F426CF404500215D24 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7F326CF404500215D24 /* DatabaseManager.swift */; };
 		0887F7F626CF405500215D24 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7F526CF405500215D24 /* AuthenticationManager.swift */; };
 		0887F7F826CF406400215D24 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7F726CF406400215D24 /* HapticsManager.swift */; };
 		0890F42826CF48EB001FF80A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0890F42726CF48EB001FF80A /* GoogleService-Info.plist */; };
+		08AFE30226D097820081BFA6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AFE30126D097820081BFA6 /* Extensions.swift */; };
+		08AFE30426D09D6A0081BFA6 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AFE30326D09D6A0081BFA6 /* PostModel.swift */; };
 		C0BDBC98E209167AF4DB85C1 /* Pods_TikTokClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02993DBC573F0A205B80DAA3 /* Pods_TikTokClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02993DBC573F0A205B80DAA3 /* Pods_TikTokClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0835A2FC26D32BC10042430B /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		0835A2FE26D33C3A0042430B /* PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComment.swift; sourceTree = "<group>"; };
+		0835A30026D33C670042430B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0835A30226D33E500042430B /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		0861553D26CF3AD500F6A90E /* TikTokClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTokClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0861554026CF3AD500F6A90E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0861554226CF3AD500F6A90E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,12 +59,13 @@
 		0887F7E726CF3FA800215D24 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		0887F7E926CF3FD000215D24 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0887F7ED26CF401000215D24 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		0887F7EF26CF401C00215D24 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		0887F7F126CF402D00215D24 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		0887F7F326CF404500215D24 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		0887F7F526CF405500215D24 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		0887F7F726CF406400215D24 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		0890F42726CF48EB001FF80A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		08AFE30126D097820081BFA6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		08AFE30326D09D6A0081BFA6 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		5F4B2F30B2F761368AA7D882 /* Pods-TikTokClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokClone.debug.xcconfig"; path = "Target Support Files/Pods-TikTokClone/Pods-TikTokClone.debug.xcconfig"; sourceTree = "<group>"; };
 		E7A502D626EE9D5149F5B51B /* Pods-TikTokClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokClone.release.xcconfig"; path = "Target Support Files/Pods-TikTokClone/Pods-TikTokClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +130,7 @@
 				0861554926CF3AD600F6A90E /* Assets.xcassets */,
 				0861554026CF3AD500F6A90E /* AppDelegate.swift */,
 				0861554226CF3AD500F6A90E /* SceneDelegate.swift */,
+				08AFE30126D097820081BFA6 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -136,6 +147,9 @@
 		0887F7D426CF3E9F00215D24 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				08AFE30326D09D6A0081BFA6 /* PostModel.swift */,
+				0835A2FE26D33C3A0042430B /* PostComment.swift */,
+				0835A30026D33C670042430B /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,7 +164,6 @@
 		0887F7D626CF3EC900215D24 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				0887F7EF26CF401C00215D24 /* APICaller.swift */,
 				0887F7F126CF402D00215D24 /* StorageManager.swift */,
 				0887F7F326CF404500215D24 /* DatabaseManager.swift */,
 				0887F7F526CF405500215D24 /* AuthenticationManager.swift */,
@@ -180,6 +193,7 @@
 				0887F7E526CF3F9B00215D24 /* SettingsViewController.swift */,
 				0887F7E726CF3FA800215D24 /* SignupViewController.swift */,
 				0887F7ED26CF401000215D24 /* PostViewController.swift */,
+				0835A2FC26D32BC10042430B /* CommentViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -195,6 +209,7 @@
 		0887F7EC26CF3FF500215D24 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				0835A30226D33E500042430B /* CommentTableViewCell.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -348,20 +363,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0835A2FD26D32BC10042430B /* CommentViewController.swift in Sources */,
 				0887F7F826CF406400215D24 /* HapticsManager.swift in Sources */,
+				08AFE30226D097820081BFA6 /* Extensions.swift in Sources */,
+				0835A30326D33E500042430B /* CommentTableViewCell.swift in Sources */,
 				0887F7F426CF404500215D24 /* DatabaseManager.swift in Sources */,
 				0887F7DA26CF3F4500215D24 /* ExploreViewController.swift in Sources */,
 				0887F7E226CF3F8500215D24 /* UserListViewController.swift in Sources */,
 				0887F7E826CF3FA800215D24 /* SignupViewController.swift in Sources */,
-				0887F7F026CF401C00215D24 /* APICaller.swift in Sources */,
 				0887F7EE26CF401000215D24 /* PostViewController.swift in Sources */,
 				0887F7DC26CF3F5400215D24 /* CameraViewController.swift in Sources */,
 				0887F7EA26CF3FD000215D24 /* TabBarViewController.swift in Sources */,
+				0835A30126D33C670042430B /* User.swift in Sources */,
 				0887F7E626CF3F9B00215D24 /* SettingsViewController.swift in Sources */,
 				0861554526CF3AD500F6A90E /* HomeController.swift in Sources */,
 				0887F7F626CF405500215D24 /* AuthenticationManager.swift in Sources */,
 				0887F7DE26CF3F5F00215D24 /* NotificationsViewController.swift in Sources */,
+				0835A2FF26D33C3A0042430B /* PostComment.swift in Sources */,
 				0887F7E026CF3F6900215D24 /* ProfileViewController.swift in Sources */,
+				08AFE30426D09D6A0081BFA6 /* PostModel.swift in Sources */,
 				0861554126CF3AD500F6A90E /* AppDelegate.swift in Sources */,
 				0887F7F226CF402D00215D24 /* StorageManager.swift in Sources */,
 				0861554326CF3AD500F6A90E /* SceneDelegate.swift in Sources */,
