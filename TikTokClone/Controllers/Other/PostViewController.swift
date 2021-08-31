@@ -95,7 +95,7 @@ class PostViewController: UIViewController {
 
         captionLabel.sizeToFit()
         let labelSize = captionLabel.sizeThatFits(CGSize(width: view.width - size - 12, height: view.height))
-        captionLabel.frame = CGRect(x: 5, y: view.height - view.safeAreaInsets.bottom - labelSize.height - 12 -  (tabBarController?.tabBar.height ?? 0), width: view.width - size - 12, height: labelSize.height)
+        captionLabel.frame = CGRect(x: 5, y: view.height - view.safeAreaInsets.bottom - labelSize.height - 12, width: view.width - size - 12, height: labelSize.height)
 
         profileButton.frame = CGRect(
             x: likeButton.left,

@@ -8,18 +8,45 @@
 import Foundation
 import UIKit
 
+protocol ExploreManagerDelegate: AnyObject {
+    func pushViewController(_ viewController: UIViewController)
+
+    func didTapHashtag(_ hashtag: String)
+}
+
 final class ExploreManager {
     static let shared = ExploreManager()
+
+    weak var delegate: ExploreManagerDelegate?
+
+    enum BannerAction: String {
+        case post
+        case hashtag
+        case user
+    }
 
     public func getExploreBanners() -> [ExploreBannerViewModel] {
         guard let exploreData = parseExploreData() else { return [] }
 
-        return exploreData.banners.compactMap({
+        return exploreData.banners.compactMap({ model in
             ExploreBannerViewModel(
-                image: UIImage(named: $0.image),
-                title: $0.title
+                image: UIImage(named: model.image),
+                title: model.title
             ) {
-                //
+                guard let action = BannerAction(rawValue: model.action) else {
+                    return
+                }
+                switch action {
+                case .post:
+                    // post
+                    break
+                case .hashtag:
+                    break
+                    // hashtag search
+                case .user:
+                    // profile
+                    break
+                }
             }
         })
     }
@@ -27,13 +54,18 @@ final class ExploreManager {
     public func getExploreCreators() -> [ExploreUserViewModel] {
         guard let exploreData = parseExploreData() else { return [] }
 
-        return exploreData.creators.compactMap({
+        return exploreData.creators.compactMap({ model in
             ExploreUserViewModel(
-                profilePictureImage: UIImage(named: $0.image),
-                username: $0.username,
-                followerCount: $0.followers_count
-            ) {
-                //
+                profilePictureImage: UIImage(named: model.image),
+                username: model.username,
+                followerCount: model.followers_count
+            ) { [weak self] in
+                DispatchQueue.main.async {
+                    let userId = model.id
+                    // fetch from firebase
+                    let vc = ProfileViewController(user: User(identifier: userId, username: "kanye", profilePictureUrl: nil))
+                    self?.delegate?.pushViewController(vc)
+                }
             }
         })
     }
@@ -41,25 +73,31 @@ final class ExploreManager {
     public func getExploreHashtags() -> [ExploreHashtagViewModel] {
         guard let exploreData = parseExploreData() else { return [] }
 
-        return exploreData.hashtags.compactMap({
+        return exploreData.hashtags.compactMap({ model in
             ExploreHashtagViewModel(
-                icon: UIImage(named: $0.image),
-                text: $0.tag,
-                count: $0.count
+                icon: UIImage(named: model.image),
+                text: model.tag,
+                count: model.count
             ) {
-                //
+                DispatchQueue.main.async {
+                    self.delegate?.didTapHashtag(model.tag)
+                }
             }
         })
     }
 
     public func getExploreTrendingPosts() -> [ExplorePostViewModel] {
         guard let exploreData = parseExploreData() else { return [] }
-        return exploreData.trendingPosts.compactMap({
+        return exploreData.trendingPosts.compactMap({ model in
             ExplorePostViewModel(
-                thumbNailImage: UIImage(named: $0.image),
-                caption: $0.caption
-            ) {
-                //                
+                thumbNailImage: UIImage(named: model.image),
+                caption: model.caption
+            ) { [weak self] in
+                // use id to get from firebase
+                DispatchQueue.main.async {
+                    let vc = PostViewController(model: PostModel(identifier: model.id))
+                    self?.delegate?.pushViewController(vc)
+                }
             }
         })
     }
@@ -67,12 +105,16 @@ final class ExploreManager {
     public func getExploreRecommendedPosts() -> [ExplorePostViewModel] {
         guard let exploreData = parseExploreData() else { return [] }
 
-        return exploreData.recommended.compactMap({
+        return exploreData.recommended.compactMap({ model in
             ExplorePostViewModel(
-                thumbNailImage: UIImage(named: $0.image),
-                caption: $0.caption
-            ) {
-                //
+                thumbNailImage: UIImage(named: model.image),
+                caption: model.caption
+            ) { [weak self] in
+                // use id to get from firebase
+                DispatchQueue.main.async {
+                    let vc = PostViewController(model: PostModel(identifier: model.id))
+                    self?.delegate?.pushViewController(vc)
+                }
             }
         })
     }
@@ -81,24 +123,32 @@ final class ExploreManager {
         guard let exploreData = parseExploreData() else { return [] }
         print(exploreData.trendingPosts)
 
-        return exploreData.recentPosts.compactMap({
+        return exploreData.recentPosts.compactMap({ model in
             ExplorePostViewModel(
-                thumbNailImage: UIImage(named: $0.image),
-                caption: $0.caption
-            ) {
-                //
+                thumbNailImage: UIImage(named: model.image),
+                caption: model.caption
+            ) { [weak self] in
+                // use id to get from firebase
+                DispatchQueue.main.async {
+                    let vc = PostViewController(model: PostModel(identifier: model.id))
+                    self?.delegate?.pushViewController(vc)
+                }
             }
         })
     }
 
     public func getExplorePopularPosts() -> [ExplorePostViewModel] {
         guard let exploreData = parseExploreData() else { return [] }
-        return exploreData.popular.compactMap({
+        return exploreData.popular.compactMap({ model in
             ExplorePostViewModel(
-                thumbNailImage: UIImage(named: $0.image),
-                caption: $0.caption
-            ) {
-                //
+                thumbNailImage: UIImage(named: model.image),
+                caption: model.caption
+            ) { [weak self] in
+                // use id to get from firebase
+                DispatchQueue.main.async {
+                    let vc = PostViewController(model: PostModel(identifier: model.id))
+                    self?.delegate?.pushViewController(vc)
+                }
             }
         })
     }

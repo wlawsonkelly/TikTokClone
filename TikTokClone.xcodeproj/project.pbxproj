@@ -20,6 +20,11 @@
 		08203FA826D84CEC003C630A /* ExploreHashtagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08203FA726D84CEC003C630A /* ExploreHashtagCollectionViewCell.swift */; };
 		08203FAA26D84D03003C630A /* ExploreUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08203FA926D84D03003C630A /* ExploreUserCollectionViewCell.swift */; };
 		08203FAC26D84D0B003C630A /* ExplorePostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08203FAB26D84D0B003C630A /* ExplorePostCollectionViewCell.swift */; };
+		08203FB126D99F1C003C630A /* AuthField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08203FAF26D99F1C003C630A /* AuthField.swift */; };
+		08203FB226D99F1C003C630A /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08203FB026D99F1C003C630A /* AuthButton.swift */; };
+		08203FB426DD6FEC003C630A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08203FB326DD6FEC003C630A /* SignUpViewController.swift */; };
+		08203FB626DDE785003C630A /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08203FB526DDE785003C630A /* RecordButton.swift */; };
+		08203FB826DECAA8003C630A /* CaptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08203FB726DECAA8003C630A /* CaptionViewController.swift */; };
 		0835A2FD26D32BC10042430B /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0835A2FC26D32BC10042430B /* CommentViewController.swift */; };
 		0835A2FF26D33C3A0042430B /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0835A2FE26D33C3A0042430B /* PostComment.swift */; };
 		0835A30126D33C670042430B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0835A30026D33C670042430B /* User.swift */; };
@@ -35,9 +40,8 @@
 		0887F7DE26CF3F5F00215D24 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7DD26CF3F5F00215D24 /* NotificationsViewController.swift */; };
 		0887F7E026CF3F6900215D24 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7DF26CF3F6900215D24 /* ProfileViewController.swift */; };
 		0887F7E226CF3F8500215D24 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7E126CF3F8500215D24 /* UserListViewController.swift */; };
-		0887F7E426CF3F9400215D24 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7E326CF3F9400215D24 /* SigninViewController.swift */; };
+		0887F7E426CF3F9400215D24 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7E326CF3F9400215D24 /* SignInViewController.swift */; };
 		0887F7E626CF3F9B00215D24 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7E526CF3F9B00215D24 /* SettingsViewController.swift */; };
-		0887F7E826CF3FA800215D24 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7E726CF3FA800215D24 /* SignupViewController.swift */; };
 		0887F7EA26CF3FD000215D24 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7E926CF3FD000215D24 /* TabBarViewController.swift */; };
 		0887F7EE26CF401000215D24 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7ED26CF401000215D24 /* PostViewController.swift */; };
 		0887F7F226CF402D00215D24 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887F7F126CF402D00215D24 /* StorageManager.swift */; };
@@ -65,6 +69,11 @@
 		08203FA726D84CEC003C630A /* ExploreHashtagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreHashtagCollectionViewCell.swift; sourceTree = "<group>"; };
 		08203FA926D84D03003C630A /* ExploreUserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUserCollectionViewCell.swift; sourceTree = "<group>"; };
 		08203FAB26D84D0B003C630A /* ExplorePostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePostCollectionViewCell.swift; sourceTree = "<group>"; };
+		08203FAF26D99F1C003C630A /* AuthField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthField.swift; sourceTree = "<group>"; };
+		08203FB026D99F1C003C630A /* AuthButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
+		08203FB326DD6FEC003C630A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		08203FB526DDE785003C630A /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
+		08203FB726DECAA8003C630A /* CaptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionViewController.swift; sourceTree = "<group>"; };
 		0835A2FC26D32BC10042430B /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		0835A2FE26D33C3A0042430B /* PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComment.swift; sourceTree = "<group>"; };
 		0835A30026D33C670042430B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -82,9 +91,8 @@
 		0887F7DD26CF3F5F00215D24 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		0887F7DF26CF3F6900215D24 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0887F7E126CF3F8500215D24 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
-		0887F7E326CF3F9400215D24 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		0887F7E326CF3F9400215D24 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		0887F7E526CF3F9B00215D24 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		0887F7E726CF3FA800215D24 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		0887F7E926CF3FD000215D24 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0887F7ED26CF401000215D24 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		0887F7F126CF402D00215D24 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -110,6 +118,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08203FAD26D99CB7003C630A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				0887F7E326CF3F9400215D24 /* SignInViewController.swift */,
+				08203FB326DD6FEC003C630A /* SignUpViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		08203FAE26D99F1C003C630A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				08203FAF26D99F1C003C630A /* AuthField.swift */,
+				08203FB026D99F1C003C630A /* AuthButton.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		0861553426CF3AD500F6A90E = {
 			isa = PBXGroup;
 			children = (
@@ -226,12 +252,12 @@
 		0887F7D826CF3F3300215D24 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				08203FAD26D99CB7003C630A /* Authentication */,
 				0887F7E126CF3F8500215D24 /* UserListViewController.swift */,
-				0887F7E326CF3F9400215D24 /* SigninViewController.swift */,
 				0887F7E526CF3F9B00215D24 /* SettingsViewController.swift */,
-				0887F7E726CF3FA800215D24 /* SignupViewController.swift */,
 				0887F7ED26CF401000215D24 /* PostViewController.swift */,
 				0835A2FC26D32BC10042430B /* CommentViewController.swift */,
+				08203FB726DECAA8003C630A /* CaptionViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -247,11 +273,13 @@
 		0887F7EC26CF3FF500215D24 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				08203FAE26D99F1C003C630A /* Auth */,
 				0835A30226D33E500042430B /* CommentTableViewCell.swift */,
 				08203FA526D84CE0003C630A /* ExploreBannerCollectionViewCell.swift */,
 				08203FA726D84CEC003C630A /* ExploreHashtagCollectionViewCell.swift */,
 				08203FA926D84D03003C630A /* ExploreUserCollectionViewCell.swift */,
 				08203FAB26D84D0B003C630A /* ExplorePostCollectionViewCell.swift */,
+				08203FB526DDE785003C630A /* RecordButton.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -407,6 +435,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08203FB226D99F1C003C630A /* AuthButton.swift in Sources */,
+				08203FB126D99F1C003C630A /* AuthField.swift in Sources */,
 				0835A2FD26D32BC10042430B /* CommentViewController.swift in Sources */,
 				0887F7F826CF406400215D24 /* HapticsManager.swift in Sources */,
 				08AFE30226D097820081BFA6 /* Extensions.swift in Sources */,
@@ -419,9 +449,9 @@
 				08203FAC26D84D0B003C630A /* ExplorePostCollectionViewCell.swift in Sources */,
 				08203F9C26D6EBB9003C630A /* ExploreHashtagViewModel.swift in Sources */,
 				0887F7E226CF3F8500215D24 /* UserListViewController.swift in Sources */,
-				0887F7E826CF3FA800215D24 /* SignupViewController.swift in Sources */,
 				0887F7EE26CF401000215D24 /* PostViewController.swift in Sources */,
 				08203F9A26D6EB98003C630A /* ExplorePostViewModel.swift in Sources */,
+				08203FB826DECAA8003C630A /* CaptionViewController.swift in Sources */,
 				08203F9426D6E6D1003C630A /* ExploreCell.swift in Sources */,
 				0887F7DC26CF3F5400215D24 /* CameraViewController.swift in Sources */,
 				08203F9826D6EB6D003C630A /* ExploreBannerViewModel.swift in Sources */,
@@ -432,6 +462,7 @@
 				08203FAA26D84D03003C630A /* ExploreUserCollectionViewCell.swift in Sources */,
 				0861554526CF3AD500F6A90E /* HomeController.swift in Sources */,
 				0887F7F626CF405500215D24 /* AuthenticationManager.swift in Sources */,
+				08203FB626DDE785003C630A /* RecordButton.swift in Sources */,
 				0887F7DE26CF3F5F00215D24 /* NotificationsViewController.swift in Sources */,
 				0835A2FF26D33C3A0042430B /* PostComment.swift in Sources */,
 				0887F7E026CF3F6900215D24 /* ProfileViewController.swift in Sources */,
@@ -440,8 +471,9 @@
 				0887F7F226CF402D00215D24 /* StorageManager.swift in Sources */,
 				08203FA626D84CE0003C630A /* ExploreBannerCollectionViewCell.swift in Sources */,
 				0861554326CF3AD500F6A90E /* SceneDelegate.swift in Sources */,
-				0887F7E426CF3F9400215D24 /* SigninViewController.swift in Sources */,
+				0887F7E426CF3F9400215D24 /* SignInViewController.swift in Sources */,
 				08203F9626D6E6FF003C630A /* ExploreSectionType.swift in Sources */,
+				08203FB426DD6FEC003C630A /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

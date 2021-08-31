@@ -13,7 +13,6 @@ target 'TikTokClone' do
 	pod 'Firebase/Database'
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Crashlytics'
-
   pod 'SDWebImage'
   pod "Appirater"
 

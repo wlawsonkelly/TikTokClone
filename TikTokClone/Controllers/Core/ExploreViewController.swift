@@ -24,6 +24,7 @@ class ExploreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        ExploreManager.shared.delegate = self
         setupSearchBar()
         setupCollectionView()
         configureModels()
@@ -198,19 +199,36 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
         let model = sections[indexPath.section].cells[indexPath.row]
         switch model {
         case .banner(viewModel: let viewModel):
+            viewModel.handler()
             break
         case .post(viewModel: let viewModel):
+            viewModel.handler()
             break
         case .hashtag(viewModel: let viewModel):
+            viewModel.handler()
             break
         case .user(viewModel: let viewModel):
+            viewModel.handler()
             break
         }
     }
 }
 
 extension ExploreViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(didTapCancel))
+    }
 
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        navigationItem.rightBarButtonItem = nil
+        searchBar.resignFirstResponder()
+    }
+
+    @objc fileprivate func didTapCancel() {
+        navigationItem.rightBarButtonItem = nil
+        searchBar.text = nil
+        searchBar.resignFirstResponder()
+    }
 }
 
 extension ExploreViewController {
@@ -323,5 +341,16 @@ extension ExploreViewController {
 
             return sectionLayout
         }
+    }
+}
+
+extension ExploreViewController: ExploreManagerDelegate {
+    func didTapHashtag(_ hashtag: String) {
+        //
+        
+    }
+    
+    func pushViewController(_ viewController: UIViewController) {
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
